@@ -1,0 +1,8 @@
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - C:\ProgramData\Miniconda3\python.exe test_mybook.py -v
+
