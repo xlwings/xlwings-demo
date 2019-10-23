@@ -1,35 +1,32 @@
 import os
 import shutil
-import unittest
 import xlwings as xw
+from pytest import approx, fixture
 
 
-class TestMyBook(unittest.TestCase):
+@fixture(scope="module")
+def book():
+    # Setup
+    filepath = 'cash_flow_statement.xlsx'
+    test_filepath = 'test_' + filepath
+    shutil.copyfile(filepath, test_filepath)
+    app = xw.App(visible=False)
+    wb = app.books.open(test_filepath)
+    yield wb
 
-    @classmethod
-    def setUpClass(cls):
-        cls.test_copy = 'test_cash_flow_statement.xlsx'
-        shutil.copyfile('cash_flow_statement.xlsx', cls.test_copy)
-        cls.app = xw.App(visible=False)
-        cls.wb = cls.app.books.open(cls.test_copy)
-
-    @classmethod
-    def tearDownClass(cls):
-        cls.wb.save()
-        cls.app.quit()
-        try:
-            os.remove(cls.test_copy)
-        except:
-            pass
-
-    def test_cash_flow_formula_integrity(self):
-        sheet = self.wb.sheets[0]
-        sheet['B2'].value = 100
-        sheet['B3:M3'].value = 10
-        sheet['B4:M4'].value = -5
-        self.assertAlmostEqual(sheet['M5'].value, 160)
+    # Teardown
+    wb.save()
+    app.quit()
+    try:
+        os.remove(test_filepath)
+    except:
+        pass
 
 
-if __name__ == '__main__':
-    unittest.main()
+def test_cash_flow_formula_integrity(book):
+    sheet = book.sheets[0]
+    sheet['B2'].value = 100
+    sheet['B3:M3'].value = 10
+    sheet['B4:M4'].value = -5
+    assert sheet['M5'].value == approx(160)
 
