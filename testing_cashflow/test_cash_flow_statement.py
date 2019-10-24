@@ -1,5 +1,8 @@
+"""
+In the root of this directory, run:
+pytest --book cash_flow_statement.xlsx --quiet
+"""
 from pytest import approx
-from utils import book
 
 
 def test_cash_flow_formula_integrity(book):
