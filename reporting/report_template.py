@@ -12,7 +12,7 @@ def main():
     template_path = template.fullname
     report_path = os.path.join(os.path.dirname(template.fullname), 'report.xlsx')
 
-    # Matplatlib
+    # Matplotlib
     fig = Figure(figsize=(4, 3))
     ax = fig.add_subplot(111)
     ax.plot([1, 2, 3, 4, 5])
