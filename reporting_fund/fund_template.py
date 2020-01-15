@@ -37,6 +37,7 @@ def main():
                 top_ten_holdings=top_ten_holdings,
                 tot_ret=tot_ret,
                 calendar_year_tot_ret=calendar_year_tot_ret,
+                fund_name='xlwings Fund'
                 )
 
     app = template.app
