@@ -39,8 +39,12 @@ def main():
                 calendar_year_tot_ret=calendar_year_tot_ret,
                 )
 
+    app = template.app
+    template.app.screen_updating = False
+
     # Create the Excel report
-    wb = create_report(template_path, report_path, **data)
+    wb = create_report(template_path, report_path, app=app, **data)
+    wb.sheets.active['A1'].select()
 
 
 if __name__ == '__main__':
