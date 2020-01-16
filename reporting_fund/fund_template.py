@@ -41,7 +41,7 @@ def main():
                 )
 
     app = template.app
-    template.app.screen_updating = False
+    app.screen_updating = False
 
     # Create the Excel report
     wb = create_report(template_path, report_path, app=app, **data)
