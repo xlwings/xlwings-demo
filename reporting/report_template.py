@@ -4,7 +4,7 @@ from PIL import Image
 from matplotlib.figure import Figure
 
 import xlwings as xw
-from xlwings_reports import create_report  # not part of the open-source xlwings package
+from xlwings.reports import create_report  # part of xlwings PRO
 
 
 def main():
@@ -22,12 +22,18 @@ def main():
                              columns=['c0', 'c1'],
                              data=[[1., 2.], [3., 4.]])
 
+    app = template.app
+    app.screen_updating = False
+
     wb = create_report(template_path,
                        report_path,
+                       app=app,
                        perf=0.12 * 100,
                        perf_data=perf_data,
                        logo=Image.open(os.path.join(os.path.dirname(template.fullname), 'xlwings.jpg')),
                        fig=fig)
+
+    wb.sheets.active['A1'].select()
 
 
 if __name__ == '__main__':
