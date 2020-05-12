@@ -2,7 +2,8 @@ import os
 import pickle
 import datetime as dt
 import xlwings as xw
-from xlwings.reports import create_report  # part of xlwings PRO
+# Requires a license key: https://www.xlwings.org/trial
+from xlwings.pro.reports import create_report
 
 
 def main():
@@ -50,5 +51,5 @@ def main():
 
 if __name__ == '__main__':
     # This part is to run the script directly from Python, not via Excel
-    xw.Book(os.path.join(os.path.dirname(__file__), 'fund_template.xlsx')).set_mock_caller()
+    xw.Book('fund_template.xlsx').set_mock_caller()
     main()

@@ -24,8 +24,6 @@ def corr_plot(corr):
     wb.sheets.active.pictures.add(fig,
                                   top=wb.selection.top,
                                   left=wb.selection.left,
-                                  height=300,
-                                  width=370,
                                   name='CorrPlot',
                                   update=True)
     plt.close()

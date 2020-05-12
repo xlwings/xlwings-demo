@@ -1,7 +1,8 @@
 import os
 import pandas as pd
 import xlwings as xw
-from xlwings.reports import create_report  # part of xlwings PRO
+# Requires a license key: https://www.xlwings.org/trial
+from xlwings.pro.reports import create_report
 
 
 def main():
