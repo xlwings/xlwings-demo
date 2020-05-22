@@ -48,6 +48,8 @@ def main():
     wb = create_report(template_path, report_path, app=app, **data)
     wb.sheets.active['A1'].select()
 
+    app.screen_updating = True
+
 
 if __name__ == '__main__':
     # This part is to run the script directly from Python, not via Excel

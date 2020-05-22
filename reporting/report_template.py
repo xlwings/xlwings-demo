@@ -23,6 +23,9 @@ def main():
                              columns=['c0', 'c1'],
                              data=[[1., 2.], [3., 4.]])
 
+    # Picture
+    logo = Image.open(os.path.join(os.path.dirname(template.fullname), 'xlwings.jpg'))
+
     app = template.app
     app.screen_updating = False
 
@@ -31,14 +34,13 @@ def main():
                        app=app,
                        perf=0.12 * 100,
                        perf_data=perf_data,
-                       logo=Image.open(os.path.join(os.path.dirname(template.fullname), 'xlwings.jpg')),
+                       logo=logo,
                        fig=fig)
 
     wb.sheets.active['A1'].select()
-
+    app.screen_updating = True
 
 if __name__ == '__main__':
     # This part is to run the script directly from Python, not via Excel
-    xw.Book(os.path.join(os.path.dirname(__file__), 'report_template.xlsx')).set_mock_caller()
+    xw.Book('report_template.xlsx').set_mock_caller()
     main()
-
