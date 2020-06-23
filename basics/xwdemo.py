@@ -13,7 +13,7 @@ def main():
 
 @xw.func
 def hello(name):
-    return "hello {0}".format(name)
+    return "hello! {0}".format(name)
 
 if __name__ == "__main__":
     xw.Book("xwdemo.xlsm").set_mock_caller()
