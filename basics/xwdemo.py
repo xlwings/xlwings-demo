@@ -1,7 +1,6 @@
 import xlwings as xw
 
 
-@xw.sub  # only required if you want to import it or run it via UDF Server
 def main():
     wb = xw.Book.caller()
     sheet = wb.sheets[0]

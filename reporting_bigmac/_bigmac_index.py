@@ -57,6 +57,7 @@ def main():
 
     app.screen_updating = True
     wb.sheets.active['A1'].select()
+    wb.to_pdf(include=1)
 
 
 if __name__ == '__main__':
