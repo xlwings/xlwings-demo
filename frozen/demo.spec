@@ -10,7 +10,7 @@ a = Analysis(['demo.py'],
              hookspath=[],
              runtime_hooks=[],
              # TODO: make sure no package appears here that you're using
-             excludes=['scipy', 'numpy', 'email', 'xml', 'pandas', 'Tkinter', 'Tkconstants', 'pydoc',
+             excludes=['scipy', 'numpy', 'pandas', 'Tkinter', 'Tkconstants', 'pydoc',
                        'tcl', 'tk', 'matplotlib', 'PIL', 'nose', 'setuptools', 'xlrd', 'xlwt', 'PyQt5',
                        'markdown', 'IPython', 'docutils'],
              win_no_prefer_redirects=False,
