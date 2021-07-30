@@ -24,6 +24,5 @@ def corr_plot(corr, caller):
                               left=caller.left,
                               name='CorrPlot',
                               update=True)
-    plt.close()
     return '<Corr Plot>'
 
