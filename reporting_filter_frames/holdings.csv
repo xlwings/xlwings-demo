@@ -1,0 +1,31 @@
+﻿Company,Exchange,Symbol,Industry,Weight
+3M,NYSE,MMM,Conglomerate,0.0384
+American Express,NYSE,AXP,Financials,0.0288
+Amgen,NASDAQ,AMGN,Pharma,0.0487
+Apple Inc.,NASDAQ,AAPL,IT,0.0257
+Boeing,NYSE,BA,Aerospace and defense,0.0492
+Caterpillar Inc.,NYSE,CAT,Construction and Mining,0.0454
+Chevron Corporation,NYSE,CVX,Petroleum industry,0.0203
+Cisco Systems,NASDAQ,CSCO,IT,0.01
+The Coca-Cola Company,NYSE,KO,Food industry,0.0104
+Dow Inc.,NYSE,DOW,Chemical industry,0.0125
+Goldman Sachs,NYSE,GS,Financials,0.0654
+The Home Depot,NYSE,HD,Retailing,0.0624
+Honeywell,NASDAQ,HON,Conglomerate,0.0447
+IBM,NYSE,IBM,IT,0.0259
+Intel,NASDAQ,INTC,IT,0.0125
+Johnson & Johnson,NYSE,JNJ,Pharma,0.0312
+JPMorgan Chase,NYSE,JPM,Financials,0.0295
+McDonald's,NYSE,MCD,Food industry,0.0449
+Merck & Co.,NYSE,MRK,Pharma,0.0149
+Microsoft,NASDAQ,MSFT,IT,0.0498
+"Nike, Inc.",NYSE,NKE,Apparel,0.0258
+Procter & Gamble,NYSE,PG,Fast-moving consumer goods,0.0264
+Salesforce,NYSE,CRM,IT,0.0445
+The Travelers Companies,NYSE,TRV,Financials,0.0303
+UnitedHealth Group,NYSE,UNH,Managed health care,0.0733
+Verizon Communications,NYSE,VZ,Telecommunication,0.0113
+Visa Inc.,NYSE,V,Financials,0.0433
+Walgreens Boots Alliance,NASDAQ,WBA,Retailing,0.0106
+Walmart,NYSE,WMT,Retailing,0.0272
+The Walt Disney Company,NYSE,DIS,Entertainment,0.0366
